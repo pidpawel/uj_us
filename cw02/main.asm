@@ -34,7 +34,7 @@ START:
 	ADC XH, ZH
 
 	ADD YL, ZL
-	ADC YH, YH
+	ADC YH, ZH
 
 	LDI R19, 0  ; W R19 trzymam informację czy było przeniesienie w ostatnim przejściu pętli
 	LDI R20, 0  ; Pomocnicze "0" do porównań

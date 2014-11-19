@@ -5,7 +5,7 @@ DUDE_PROGRAMMER = usbasp
 DUDE_PORT = usb
 
 TARGET=main
-OBJS=$(TARGET).o
+OBJS=$(TARGET).o scheduler.o
 
 OPTIMIZE = O2
 CC = avr-gcc
@@ -20,17 +20,16 @@ CFLAGS  = -mmcu=$(MCU)
 CFLAGS += -$(OPTIMIZE)
 CFLAGS += -g
 CFLAGS += -std=gnu99
-CFLAGS += -funsigned-char
-CFLAGS += -funsigned-bitfields
-CFLAGS += -fpack-struct
-CFLAGS += -ffreestanding
-CFLAGS += -fshort-enums
-CFLAGS += -fverbose-asm
+#CFLAGS += -funsigned-char
+#CFLAGS += -funsigned-bitfields
+#CFLAGS += -fpack-struct
+#CFLAGS += -ffreestanding
+#CFLAGS += -fshort-enums
+#CFLAGS += -fverbose-asm
 CFLAGS += -Wall
 CFLAGS += -I/usr/avr/include
-CFLAGS += -Wstrict-prototypes
+#CFLAGS += -Wstrict-prototypes
 CFLAGS += -DF_CPU=$(F_CPU)
-CFLAGS += -DBAUD=$(BAUD)
 
 ESC = \033[
 DEBUG = $(ESC)34;40;1m

@@ -27,8 +27,6 @@ void init_7seg() {
 
 	DDRC = 0xFF;
 	PORTC = 0xFF;
-
-	counter = 99900;
 }
 
 // Pokazuje literke, dot - flaga czy zaswiecic kropke
